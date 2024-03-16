@@ -1,20 +1,20 @@
 import random
 import gradio as gr
 
-def play_game(player_choice):
+def play_game(your_choice):
     choices = ['rock', 'paper', 'scissors']
     computer_choice = random.choice(choices)
     
-    if player_choice == computer_choice:
+    if your_choice == computer_choice:
         result = "It's a tie!"
-    elif (player_choice == 'rock' and computer_choice == 'scissors') or \
-         (player_choice == 'paper' and computer_choice == 'rock') or \
-         (player_choice == 'scissors' and computer_choice == 'paper'):
+    elif (your_choice == 'rock' and computer_choice == 'scissors') or \
+         (your_choice == 'paper' and computer_choice == 'rock') or \
+         (your_choice == 'scissors' and computer_choice == 'paper'):
         result = "You win!"
     else:
         result = "Computer wins!"
     
-    return f"You chose {player_choice}, computer chose {computer_choice}. {result}"
+    return f"You choose {your_choice}, computer choose {computer_choice}. {result}"
 
-iface = gr.Interface(play_game, "text", "text")
-iface.launch()
+iface = gr.Interface(play_game, gr.Dropdown(["rock", "paper","scissors"]), "text")
+iface.launch(share=True)
