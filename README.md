@@ -3,6 +3,7 @@
 This is a simple Rock, Paper, Scissors game implemented using Python and Gradio UI. The game allows a player to choose their move (rock, paper, or scissors) and plays against the computer's randomly chosen move.
 
 ## How to Play
+[Live play Here](https://huggingface.co/spaces/Mustafaansari/Rock_Paper_Scissors_Game)
 
 1. Choose your move (rock, paper, or scissors) by typing it into the input box.
 2. Press Enter or click the "Submit" button to make your choice.
